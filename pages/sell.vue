@@ -151,7 +151,7 @@
         productCreationSuccessMsg.value = 'Product created successfully, Redirecting...'
         const productID = product.value.id
         setTimeout(async () => {
-            await navigateTo(`/product-${productID}`, {external: true})
+            await navigateTo(`/product-${productID}`)
         }, 2000);
     }
 </script>

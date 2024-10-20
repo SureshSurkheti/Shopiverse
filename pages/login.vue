@@ -72,7 +72,7 @@
       successMsg.value = 'Redirecting...'
       setTimeout(async () => {
           successMsg.value = null
-          await navigateTo('/')
+          await navigateTo('/', {external: true})
       },2000)
   }
 
