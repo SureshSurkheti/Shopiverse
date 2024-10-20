@@ -35,7 +35,7 @@
     }
 
     onMounted(async () => {
-        stripe = await stripe(stripePK)
+        stripe = await Stripe(stripePK)
         const initialize = async () => {
             const {data} = await useFetch('/api/stripe/paymentintent', {
                 method: 'post',
@@ -76,7 +76,7 @@
     elements,
     confirmParams: {
       // Make sure to change this to your payment completion page
-      return_url: "http://localhost:3000/payment-success",
+      return_url: "https://shopiversesuresh.netlify.app/payment-success",
     },
   });
 
